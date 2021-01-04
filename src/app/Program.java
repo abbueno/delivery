@@ -20,12 +20,7 @@ public class Program {
 			
 		while (rs.next()) {
                     
-                    Product p = new Product();
-                    p.setId(rs.getLong("Id"));
-                    p.setDescription(rs.getString("description"));
-                    p.setName(rs.getString("name"));
-                    p.setImageUri(rs.getString("image_uri"));
-                    p.setPrice(rs.getDouble("price"));
+                    Product p = instantiateProduct(rs);
                     
 			System.out.println(p);
 		}
